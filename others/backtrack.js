@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/permutations/
+
 const backtrack = (nums, set = [], ans = []) => {
   if (!nums.length) ans.push([...set]);
 
@@ -9,10 +11,6 @@ const backtrack = (nums, set = [], ans = []) => {
   }
 
   return ans;
-};
-
-const permutate = (nums) => {
-  // backtrack()
 };
 
 const res = backtrack([1, 2, 3]);

@@ -3,10 +3,14 @@
 function miniMaxSum(arr: number[]): void {
   let minSum = 0,
     maxSum = 0;
+
+  arr.sort((a, b) => a - b);
+
   for (let i = 0; i < arr.length; i++) {
     if (i != arr.length - 1) minSum += arr[i];
     if (i != 0) maxSum += arr[i];
   }
+
   console.log(`${minSum} ${maxSum}`);
 }
 
