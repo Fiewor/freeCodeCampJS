@@ -19,5 +19,5 @@ function birthday(s: number[], d: number, m: number): number {
 
 let s = [2, 2, 1, 3, 2],
   d = 4,
-  m = 2;
-console.log(birthday(s, d, m));
+  month = 2;
+console.log(birthday(s, d, month));
