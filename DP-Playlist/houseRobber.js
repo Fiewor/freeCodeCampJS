@@ -11,8 +11,8 @@ const fMemo = (n, arr, dp = {}) => {
   if (dp[n]) return dp[n];
 
   let pick = arr[n];
-  if (n > 1) pick += f(n - 2, arr);
-  let nonPick = f(n - 1, arr);
+  if (n > 1) pick += f(n - 2, arr, dp);
+  let nonPick = f(n - 1, arr, dp);
   dp[n] = Math.max(pick, nonPick);
   return dp[n];
 };
@@ -32,7 +32,7 @@ const tab = (arr) => {
   for (let i = 1; i < n; i++) {
     let pick = dp[i];
 
-    if (pick > 1) pick += dp[i - 2];
+    if (i > 1) pick += dp[i - 2];
     let nonPick = dp[i - 1];
     dp[i] = Math.max(pick, nonPick);
   }

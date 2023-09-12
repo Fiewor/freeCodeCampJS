@@ -77,6 +77,21 @@ function uniquePathsSpaceOp(m, n) {
   return prev[n - 1];
 }
 
+var uniquePathsBetterSpaceOp = function (m, n) {
+  let prev = Array(n).fill(1);
+
+  for (let i = 1; i < m; i++) {
+    let curr = Array(m).fill(1);
+
+    for (let j = 1; j < n; j++) {
+      curr[j] = prev[j] + curr[j - 1];
+    }
+    prev = curr;
+  }
+
+  return prev[n - 1];
+};
+
 console.log(uniquePaths(4, 4));
 console.log(uniquePathsTab(2, 2));
 console.log(uniquePathsSpaceOp(2, 2));

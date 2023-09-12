@@ -60,7 +60,7 @@ const subsetSumToKSpaceOp = (arr, k) => {
   prev[0] = true;
   curr[0] = true;
 
-  prev[arr[0]] = true;
+  if (arr[0] <= k) prev[arr[0]] = true; // only do this if array element is less than target
 
   for (let i = 1; i < n; i++) {
     for (let target = 1; target <= k; target++) {
