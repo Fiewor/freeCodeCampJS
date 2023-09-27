@@ -1,6 +1,6 @@
 # substring
 # order must be maintained
-# you're NOT allowed to jump characters i.e. it MUST be consecutive
+# you're NOT allowed to jump characters i.e. it MUST be contiguous
 
 
 def longest_common_substring(s1: str, s2: str) -> int:

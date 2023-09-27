@@ -1,6 +1,6 @@
 # subsequence
 # order must be maintained
-# you're allowed to jump characters i.e. it musn't necessarily be consecutive
+# you're allowed to jump characters i.e. it musn't necessarily be contiguous
 
 
 # ------ recursion ------
