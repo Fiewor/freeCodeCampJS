@@ -18,7 +18,7 @@ def frequencySort(s: str) -> str:
 
     return res
 
-# shorted approach
+# shorter approach
 def frequencySort(s: str) -> str:
     freq = Counter(s)
     arr = list(sorted(freq.items(), key=lambda x:x[1], reverse=True))
