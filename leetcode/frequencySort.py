@@ -3,6 +3,7 @@
 from collections import Counter
 import heapq
 
+# frequency count, sorting and building string
 def frequencySort(s: str) -> str:
     freq = Counter(s)
     res = ''
@@ -17,11 +18,13 @@ def frequencySort(s: str) -> str:
 
     return res
 
+# shorted approach
 def frequencySort(s: str) -> str:
     freq = Counter(s)
     arr = list(sorted(freq.items(), key=lambda x:x[1], reverse=True))
     return ''.join(char * freq for char, freq in arr)
 
+# using a min-heap
 def frequencySort(s: str) -> str:
     res = ''
     freq = Counter(s)
