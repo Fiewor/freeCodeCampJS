@@ -5,17 +5,17 @@ import heapq
 from typing import List
 
 # sorting
-# def findLeastNumOfUniqueInts(arr: List[int], k: int) -> int:
-#     c = Counter(arr)
-#     counts = sorted(c.items(), key=lambda x:x[1])
-#     no_of_unique_elements = len(c.keys())
+def findLeastNumOfUniqueInts(arr: List[int], k: int) -> int:
+    c = Counter(arr)
+    counts = sorted(c.items(), key=lambda x:x[1])
+    no_of_unique_elements = len(c.keys())
     
-#     for _, freq in counts:
-#         if k >= freq:
-#             no_of_unique_elements -= 1
-#             k -= freq
+    for _, freq in counts:
+        if k >= freq:
+            no_of_unique_elements -= 1
+            k -= freq
     
-#     return no_of_unique_elements
+    return no_of_unique_elements
 
 # min-heap
 def findLeastNumOfUniqueInts(arr: List[int], k: int) -> int:
