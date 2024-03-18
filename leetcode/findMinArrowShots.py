@@ -19,7 +19,7 @@ def findMinArrowShots(points: List[List[int]]) -> int:
 
     return num
 
-# increment num (and interval end) when new non-overlapping interval is encountered
+# increment num (and update interval end) when new non-overlapping interval is encountered
 def findMinArrowShots(points: List[List[int]]) -> int:
     points.sort(key=lambda x:x[1]) #note the sort based on end
     num = 1
