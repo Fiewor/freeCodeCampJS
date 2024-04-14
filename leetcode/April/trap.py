@@ -5,7 +5,7 @@ from typing import List
 # time complexity - O(n)
 # space complexity - O(n)
 def trap(height: List[int]) -> int:
-    n = le(height)
+    n = len(height)
     leftMax = [0] * n
     leftMax[0] = height[0]
 
