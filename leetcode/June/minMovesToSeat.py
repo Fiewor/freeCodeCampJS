@@ -4,18 +4,19 @@ from typing import List
 
 # using built-in sort
 # time complexity -> O(nlogn)
-# def minMovesToSeat(seats: List[int], students: List[int]) -> int:
-#     res = 0
-#     seats.sort()
-#     students.sort()
+def minMovesToSeat(seats: List[int], students: List[int]) -> int:
+    res = 0
+    seats.sort()
+    students.sort()
 
-#     for i in range(len(seats)):
-#         res += abs(seats[i] - students[i])
+    for i in range(len(seats)):
+        res += abs(seats[i] - students[i])
 
-#     return res
+    return res
 
 
 # using counting sort
+# time complexity -> O(n)
 def minMovesToSeat(seats: List[int], students: List[int]) -> int:
     max_index = max(max(seats), max(students)) + 1
     count_seats = [0] * max_index
