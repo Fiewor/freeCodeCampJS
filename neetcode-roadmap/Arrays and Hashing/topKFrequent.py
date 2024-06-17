@@ -5,6 +5,7 @@ import heapq
 from typing import List
 
 # sorting
+# time complexity -> O(nlogn)
 def topKFrequent(nums: List[int], k: int) -> List[int]:
     count = {num:nums.count(num) for num in nums}
     res = sorted(count, key=lambda x:count[x], reverse=True)
