@@ -9,16 +9,18 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def createBinaryTree(self, descriptions: List[List[int]]) -> Optional[TreeNode]:
+def createBinaryTree(descriptions: List[List[int]]) -> Optional[TreeNode]:
     nodes = {}
     children = set()
 
     for par, child, is_left in descriptions:
         children.add(child)
+
         if par not in nodes:
             nodes[par] = TreeNode(par)
         if child not in nodes:
             nodes[child] = TreeNode(child)
+
         if is_left:
             nodes[par].left = nodes[child]
         else:
@@ -27,3 +29,6 @@ def createBinaryTree(self, descriptions: List[List[int]]) -> Optional[TreeNode]:
     for par, _, _ in descriptions:
         if par not in children:
             return nodes[par]
+
+descriptions = [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]]  
+print(createBinaryTree(descriptions))
